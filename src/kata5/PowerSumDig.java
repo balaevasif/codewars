@@ -14,13 +14,13 @@ public class PowerSumDig {
 
         char[] numbers;
         int test;
-        for (long i = 80; i < max_value; i++) {
+        for (long i = 81; i < max_value; i++) {
             test = 0;
             numbers = Integer.toString((int) i).toCharArray();
             for (int j = 0; j < numbers.length; j++) {
                 test += Integer.parseInt(String.valueOf(numbers[j]));
             }
-            for (int j = 1; j < 5; j++) {
+            for (int j = 1; j < 4; j++) {
                 if (pow(test, j) == i) {
                     num.add((int) i);
                 }
@@ -31,6 +31,6 @@ public class PowerSumDig {
     }
 
     public static void main(String[] arg){
-        System.out.println(powerSumDigTerm(4));
+        System.out.println(powerSumDigTerm(7));
     }
 }

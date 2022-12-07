@@ -1,6 +1,11 @@
 package kata5;
+//import java.lang.Object.org.apache.commons.lang3.ArrayUtils;
+
+import org.apache.commons.lang3.ArrayUtils;
 
 import java.util.Arrays;
+//import org.apache.commons.lang3.ArrayUtils;
+
 
 public class Scramblies {
 
@@ -13,20 +18,25 @@ public class Scramblies {
             for (int j = 0; j < str_1.length; j++) {
                 //System.out.println(str_1[j]);
                 if (str_2[i] == str_1[j]){
+                    //str_2 = ArrayUtils.remove(str_2, str_2[i]);
+                    //str_1 = ArrayUtils.remove(str_1, str_1[j]);
                     str_2[i] = ' ';
                     str_1[j] = ' ';
                 }
             }
         }
-        Arrays.sort(str_2);
+
+
+        //Arrays.sort(str_2);
+
         boolean empty = false;
 
-        for (int i = 0; i < str_2.length; i++) {
-            if (str_2[i] == ' '){
-                empty = true;
-            }
-            else empty = false;
-        }
+//        for (int i = 0; i < str_2.length; i++) {
+//            if (str_2[i] == ' '){
+//                empty = true;
+//            }
+//            else empty = false;
+//        }
         return empty;
     }
 
